@@ -3,11 +3,11 @@ import {serialize} from "cookie";
 export default function loginHandler(req, res) {
     const { email, password } = req.body;
 
-    if (email === "admin@local.local" && password === "admin") {
+    if (email === "davidandrex1390@gmail.com" && password === "admin") {
         const token = jwt.sign(
             {
                 exp: Math.floor(Date.now() / 1000) + 60 * 60 * 24 * 30, //token valido por 30 días
-                email: "amdin@local.local",
+                email: "davidandrex1390@gmail.com",
                 username: "david",
             },
             "secret"
